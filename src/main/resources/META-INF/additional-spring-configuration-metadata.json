@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "logging.com.example.battery",
+      "type": "java.lang.String",
+      "description": "Description for logging.com.example.battery."
+  }
+] }

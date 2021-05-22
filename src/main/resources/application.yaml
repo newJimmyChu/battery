@@ -1,0 +1,18 @@
+spring:
+    datasource:
+        url: jdbc:sqlserver://101.200.164.167:1433;databaseName=Battery
+        username: sa
+        password: HuXinMeng1202!
+
+server:
+    port: 8081
+
+mybatis:
+    type-aliases-package: com.touching.fish.backend.dto
+    config-location: classpath:mybatis-config.xml
+    mapper-locations: classpath:dao/*.xml
+
+logging:
+    level:
+        com.example.battery: trace
+
