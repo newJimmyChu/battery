@@ -14,4 +14,13 @@
         <result column="DefVoltage" property="DefVoltage" />
     </resultMap>
 
+    <select id="getGroupBatteryHistByGroupBatteryID" parameterType="int"
+            resultType="com.example.battery.core.entity.GroupBatteryHis">
+        select *
+        from
+            GroupBatteryHis as G
+        where
+            G.GroupBatteryID = #{GroupBatteryID}
+    </select>
+
 </mapper>

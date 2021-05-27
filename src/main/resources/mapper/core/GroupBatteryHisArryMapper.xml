@@ -12,4 +12,14 @@
         <result column="SOC" property="SOC" />
     </resultMap>
 
+    <select id="getGroupBatteryHistArryByGroupBatteryHisID" parameterType="int"
+            resultType="com.example.battery.core.entity.GroupBatteryHisArry">
+        select *
+        from
+            GroupBatteryHisArry as G
+        where
+            G.GroupBatteryHisID = #{GroupBatteryHisID}
+    </select>
+
+
 </mapper>

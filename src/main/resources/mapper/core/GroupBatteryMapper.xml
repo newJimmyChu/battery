@@ -599,4 +599,13 @@
         <result column="SOC191" property="SOC191" />
     </resultMap>
 
+    <select id="getGroupBatteryByContrallerID" parameterType="int"
+            resultType="com.example.battery.core.entity.GroupBattery">
+        select *
+        from
+            GroupBattery as G
+        where
+            G.ContrallerID = #{ContrallerID}
+    </select>
+
 </mapper>

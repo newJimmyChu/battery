@@ -12,4 +12,12 @@
         <result column="EndTime" property="EndTime" />
     </resultMap>
 
+    <select id="getGroRunAlarmByGroupBatteryID" parameterType="int"
+            resultType="com.example.battery.core.entity.GroRunAlarm">
+        select *
+        from
+            GroRunAlarm as G
+        where
+            G.GroupBatteryID = #{GroupBatteryID}
+    </select>
 </mapper>

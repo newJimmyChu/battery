@@ -15,8 +15,8 @@ import lombok.EqualsAndHashCode;
  * @author chuzefang
  * @since 2021-05-22
  */
-@Data
 @EqualsAndHashCode(callSuper = false)
+@Data
 public class GroupBattery implements Serializable {
 
     private static final long serialVersionUID = 1L;

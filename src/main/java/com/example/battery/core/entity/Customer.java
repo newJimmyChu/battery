@@ -15,8 +15,9 @@ import org.springframework.data.relational.core.mapping.Column;
  * @author chuzefang
  * @since 2021-05-22
  */
-@Data
+
 @EqualsAndHashCode(callSuper = false)
+@Data
 public class Customer implements Serializable {
 
     private static final long serialVersionUID = 1L;

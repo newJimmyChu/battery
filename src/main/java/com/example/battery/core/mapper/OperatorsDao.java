@@ -12,5 +12,5 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @since 2021-05-22
  */
 public interface OperatorsDao extends BaseMapper<Operators> {
-
+    Operators getOperatorByWXID(String WXID);
 }

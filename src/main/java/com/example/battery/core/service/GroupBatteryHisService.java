@@ -2,6 +2,7 @@ package com.example.battery.core.service;
 
 import com.example.battery.core.entity.GroupBatteryHis;
 import com.baomidou.mybatisplus.extension.service.IService;
+import java.util.List;
 
 /**
  * <p>
@@ -12,5 +13,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2021-05-22
  */
 public interface GroupBatteryHisService extends IService<GroupBatteryHis> {
-
+    List<GroupBatteryHis> getGroupBatteryHistByGroupBatteryID(int GroupBatteryID);
 }

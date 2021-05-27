@@ -24,4 +24,5 @@ public class CustomerServiceImpl extends ServiceImpl<CustomerDao, Customer> impl
         LambdaQueryWrapper<Customer> wrapper = new LambdaQueryWrapper<>();
         return baseMapper.selectList(wrapper.ne(Customer::getID, 0));
     }
+
 }

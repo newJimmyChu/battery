@@ -12,5 +12,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2021-05-22
  */
 public interface OperatorsService extends IService<Operators> {
-
+    Operators getOperatorByWXID(String WXID);
 }

@@ -9,4 +9,12 @@
         <result column="ContrallerID" property="ContrallerID" />
     </resultMap>
 
+    <select id="getAllContrallerByOperatorID" parameterType="int"
+            resultType="com.example.battery.core.entity.OpeLevel">
+        select *
+        from
+            OpeLevel as O
+        where
+            O.OperatorsID = #{OperatorsID}
+    </select>
 </mapper>

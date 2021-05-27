@@ -4,6 +4,7 @@ import com.example.battery.core.entity.Operators;
 import com.example.battery.core.mapper.OperatorsDao;
 import com.example.battery.core.service.OperatorsService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -17,4 +18,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class OperatorsServiceImpl extends ServiceImpl<OperatorsDao, Operators> implements OperatorsService {
 
+    @Autowired
+    private OperatorsDao operatorsDao;
+
+    @Override
+    public Operators getOperatorByWXID(String WXID){
+        return operatorsDao.getOperatorByWXID(WXID);
+    }
 }

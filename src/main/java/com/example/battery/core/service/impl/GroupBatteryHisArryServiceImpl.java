@@ -4,7 +4,10 @@ import com.example.battery.core.entity.GroupBatteryHisArry;
 import com.example.battery.core.mapper.GroupBatteryHisArryDao;
 import com.example.battery.core.service.GroupBatteryHisArryService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * <p>
@@ -16,5 +19,10 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class GroupBatteryHisArryServiceImpl extends ServiceImpl<GroupBatteryHisArryDao, GroupBatteryHisArry> implements GroupBatteryHisArryService {
-
+    @Autowired
+    private GroupBatteryHisArryDao groupBatteryHisArryDao;
+    @Override
+    public List<GroupBatteryHisArry> getGroupBatteryHistArryByGroupBatteryHisID(int GroupBatteryHisID){
+        return groupBatteryHisArryDao.getGroupBatteryHistArryByGroupBatteryHisID(GroupBatteryHisID);
+    }
 }

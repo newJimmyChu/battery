@@ -11,4 +11,13 @@
         <result column="BegTime" property="BegTime" />
     </resultMap>
 
+    <select id="getGroRunErrorByGroupBatteryID" parameterType="int"
+            resultType="com.example.battery.core.entity.GroRunError">
+        select *
+        from
+            GroRunError as G
+        where
+            G.GroupBatteryID = #{GroupBatteryID}
+    </select>
+
 </mapper>

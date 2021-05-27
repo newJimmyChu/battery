@@ -10,6 +10,16 @@
         <result column="OpPassword" property="OpPassword" />
         <result column="CustomerID" property="CustomerID" />
         <result column="Level" property="Level" />
+        <result column="WXID" property="WXID" />
     </resultMap>
+
+    <select id="getOperatorByWXID" parameterType="String"
+            resultType="com.example.battery.core.entity.Operators">
+        select *
+        from
+            Operators as O
+        where
+            O.WXID = #{WXID}
+    </select>
 
 </mapper>

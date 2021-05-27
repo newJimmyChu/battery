@@ -10,4 +10,13 @@
         <result column="BegTime" property="BegTime" />
     </resultMap>
 
+    <select id="getGroRunEventByGroupBatteryID" parameterType="int"
+            resultType="com.example.battery.core.entity.GroRunEvent">
+        select *
+        from
+            GroRunEvent as G
+        where
+            G.GroupBatteryID = #{GroupBatteryID}
+    </select>
+
 </mapper>

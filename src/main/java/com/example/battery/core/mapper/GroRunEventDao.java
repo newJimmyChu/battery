@@ -3,6 +3,8 @@ package com.example.battery.core.mapper;
 import com.example.battery.core.entity.GroRunEvent;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
+import java.util.List;
+
 /**
  * <p>
  *  Mapper 接口
@@ -13,4 +15,5 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface GroRunEventDao extends BaseMapper<GroRunEvent> {
 
+    List<GroRunEvent> getGroRunEventByGroupBatteryID(int groupBatteryID);
 }

@@ -14,8 +14,9 @@ import lombok.EqualsAndHashCode;
  * @author chuzefang
  * @since 2021-05-22
  */
-@Data
+
 @EqualsAndHashCode(callSuper = false)
+@Data
 public class Contraller implements Serializable {
 
     private static final long serialVersionUID = 1L;
